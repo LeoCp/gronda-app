@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "esnext",
+    "lib": ["es6"],
+    "isolatedModules": true,
+    "jsx": "react",
+    "moduleResolution": "Node",
+    "typeRoots": ["node_modules/@types", "./src/types"],
+    "module": "esnext",
+    "strict": true,
+    "noEmit": true,
+    "paths": {
+      "@screens/*": ["./src/screens/*"],
+      "@components/*": ["./src/components/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@navigation/*": ["./src/navigation/*"],
+      "@storage/*": ["./src/storage/*"],
+      "@types/*": ["./src/types/*"],
+      "@models/*": ["./src/models/*"],
+      "@services/*": ["./src/services/*"],
+      "@utils/*": ["./src/utils/*"]
+    }
+  },
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js"]
+}
