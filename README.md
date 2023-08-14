@@ -30,10 +30,7 @@ src/
 ```
 
 ### Demonstration
-<figure class="video_container">
-  <iframe src="https://drive.google.com/file/d/1FSobW8yOwv6t6JUJnh7pxTADWELdPdLF/preview"frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
-
+https://github.com/LeoCp/gronda-app/assets/2670744/eca7b9e0-f3e0-45bb-9189-f75f55cf6ba1
 
 ### Installation
 
