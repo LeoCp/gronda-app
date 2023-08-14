@@ -3,7 +3,7 @@ import { fireEvent } from '@testing-library/react-native';
 import * as navigation from '@react-navigation/native';
 
 import { Creation } from '@screens/creation';
-import { renderWithTheme } from '@utils/test';
+import { renderWithTheme } from '@utils/test-helper';
 import { TCreationRouteProp } from '@screens/creation/types/route-prop';
 
 describe('Creation Screen', () => {

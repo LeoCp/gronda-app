@@ -1,8 +1,9 @@
 import React from 'react';
-import { fireEvent, render } from '@testing-library/react-native';
+import { fireEvent } from '@testing-library/react-native';
 
 import * as hook from '@screens/home/creations/hooks/creations';
 import { Creations } from '@screens/home/creations';
+import { renderWithTheme } from '@utils/test-helper';
 
 const data = [
   {
@@ -27,7 +28,7 @@ describe('Creations Component', () => {
       data: [],
     });
 
-    const { getByTestId } = render(<Creations />);
+    const { getByTestId } = renderWithTheme(<Creations />);
 
     const tryAgain = getByTestId('try-again');
     fireEvent.press(tryAgain);
@@ -44,7 +45,7 @@ describe('Creations Component', () => {
       data: [],
     });
 
-    const { queryByTestId } = render(<Creations />);
+    const { queryByTestId } = renderWithTheme(<Creations />);
 
     const loading = queryByTestId('loading');
 
@@ -60,7 +61,7 @@ describe('Creations Component', () => {
       data,
     });
 
-    const { queryByTestId } = render(<Creations />);
+    const { queryByTestId } = renderWithTheme(<Creations />);
     const creationList = queryByTestId('creations');
 
     expect(creationList).not.toBeNull();

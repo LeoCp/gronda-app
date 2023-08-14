@@ -5,7 +5,7 @@ import { CreationVisitsStorage } from '@storage/creation-visits';
 
 import { useCreations } from '@screens/home/creations/hooks/creations';
 import { Routes } from '@navigation/types/routes';
-import { renderWithTheme } from '@utils/test';
+import { renderWithTheme } from '@utils/test-helper';
 
 const mockVisitCount = 7;
 const mockNavigate = jest.fn();

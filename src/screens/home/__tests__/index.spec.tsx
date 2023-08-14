@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Home } from '@screens/home';
-import { renderWithTheme } from '@utils/test';
+import { renderWithTheme } from '@utils/test-helper';
 
 jest.mock('@screens/home/creations/hooks/creations', () => ({
   useCreations: jest.fn().mockReturnValue({
