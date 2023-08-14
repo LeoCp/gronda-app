@@ -1,0 +1,421 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Should match snapshot 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "backgroundColor": "#fff",
+      "flexBasis": 0,
+      "flexGrow": 1,
+      "flexShrink": 1,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "paddingBottom": 12,
+        "paddingTop": 15,
+      }
+    }
+  >
+    <Image
+      source={
+        {
+          "testUri": "../../../src/assets/icons/logo.png",
+        }
+      }
+      style={
+        {
+          "height": 45,
+          "width": 130,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      {
+        "flex": 1,
+        "overflow": "hidden",
+      }
+    }
+  >
+    <RCTScrollView
+      ListHeaderComponent={<Banner />}
+      applyWindowCorrection={[Function]}
+      canChangeSize={true}
+      contentContainerStyle={
+        {
+          "backgroundColor": undefined,
+          "minHeight": 1,
+          "minWidth": 1,
+          "paddingLeft": 8,
+          "paddingRight": 8,
+        }
+      }
+      contentHeight={0}
+      contentWidth={0}
+      data={[]}
+      dataProvider={
+        DataProvider {
+          "_data": [],
+          "_firstIndexToProcess": 0,
+          "_hasStableIds": false,
+          "_requiresDataChangeHandling": false,
+          "_size": 0,
+          "getStableId": [Function],
+          "rowHasChanged": [Function],
+        }
+      }
+      disableRecycling={false}
+      estimatedItemSize={200}
+      externalScrollView={[Function]}
+      finalRenderAheadOffset={250}
+      forceNonDeterministicRendering={true}
+      horizontal={false}
+      initialOffset={0}
+      initialRenderIndex={0}
+      isHorizontal={false}
+      layoutProvider={
+        GridLayoutProviderWithProps {
+          "_acceptableRelayoutDelta": 1,
+          "_getHeightOrWidth": [Function],
+          "_getLayoutTypeForIndex": [Function],
+          "_getSpan": [Function],
+          "_hasExpired": false,
+          "_maxSpan": 2,
+          "_setLayoutForType": [Function],
+          "_tempDim": {
+            "height": 0,
+            "width": 0,
+          },
+          "averageWindow": AverageWindow {
+            "currentAverage": 200,
+            "currentCount": 1,
+            "inputValues": [
+              200,
+            ],
+            "nextIndex": 1,
+          },
+          "defaultEstimatedItemSize": 100,
+          "layoutObject": {
+            "size": undefined,
+            "span": undefined,
+          },
+          "props": {
+            "ListHeaderComponent": <Banner />,
+            "contentContainerStyle": {
+              "paddingHorizontal": 8,
+            },
+            "data": [],
+            "estimatedItemSize": 200,
+            "numColumns": 2,
+            "renderItem": undefined,
+            "style": {},
+            "testID": "creations",
+            "theme": {
+              "color": {
+                "black": "#000000",
+                "light": "#FFFFFF",
+                "primary": "#52a8c9",
+                "sea-green": "#075669",
+              },
+              "fontFamily": {
+                "bold": "TT Commons DemiBold",
+                "regular": "TT Commons Regular",
+              },
+              "fontSize": {
+                "lg": 24,
+                "md": 19,
+                "sm": 17,
+                "xl": 60,
+                "xs": 13,
+              },
+            },
+          },
+          "renderWindowInsets": {
+            "height": 0,
+            "width": -16,
+          },
+          "shouldRefreshWithAnchoring": true,
+        }
+      }
+      maxRenderAhead={750}
+      numColumns={2}
+      onEndReached={[Function]}
+      onEndReachedThreshold={0}
+      onEndReachedThresholdRelative={0}
+      onItemLayout={[Function]}
+      onLayout={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onSizeChanged={[Function]}
+      onVisibleIndicesChanged={[Function]}
+      removeClippedSubviews={false}
+      renderAheadOffset={0}
+      renderAheadStep={250}
+      renderContentContainer={[Function]}
+      renderItemContainer={[Function]}
+      rowRenderer={[Function]}
+      scrollEventThrottle={16}
+      scrollThrottle={16}
+      scrollViewProps={
+        {
+          "contentContainerStyle": {
+            "backgroundColor": undefined,
+            "minHeight": 1,
+            "minWidth": 1,
+            "paddingLeft": 8,
+            "paddingRight": 8,
+          },
+          "onLayout": [Function],
+          "onScrollBeginDrag": [Function],
+          "refreshControl": undefined,
+          "style": {
+            "minHeight": 1,
+            "minWidth": 1,
+          },
+        }
+      }
+      style={
+        {
+          "minHeight": 1,
+          "minWidth": 1,
+        }
+      }
+      suppressBoundedSizeException={true}
+      testID="creations"
+      theme={
+        {
+          "color": {
+            "black": "#000000",
+            "light": "#FFFFFF",
+            "primary": "#52a8c9",
+            "sea-green": "#075669",
+          },
+          "fontFamily": {
+            "bold": "TT Commons DemiBold",
+            "regular": "TT Commons Regular",
+          },
+          "fontSize": {
+            "lg": 24,
+            "md": 19,
+            "sm": 17,
+            "xl": 60,
+            "xs": 13,
+          },
+        }
+      }
+      windowCorrectionConfig={
+        {
+          "applyToInitialOffset": true,
+          "applyToItemScroll": true,
+          "value": {
+            "endCorrection": 0,
+            "startCorrection": 0,
+            "windowShift": -1,
+          },
+        }
+      }
+    >
+      <View>
+        <View
+          style={
+            {
+              "flexDirection": "column",
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "paddingLeft": 8,
+                "paddingTop": 0,
+              }
+            }
+          />
+          <View
+            style={
+              [
+                undefined,
+                undefined,
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "paddingBottom": 8,
+                  "paddingLeft": 8,
+                  "paddingRight": 8,
+                  "paddingTop": 8,
+                }
+              }
+            >
+              <View
+                style={
+                  [
+                    {
+                      "overflow": "hidden",
+                    },
+                    {
+                      "borderBottomLeftRadius": 8,
+                      "borderBottomRightRadius": 8,
+                      "borderTopLeftRadius": 8,
+                      "borderTopRightRadius": 8,
+                      "height": 170,
+                      "marginTop": 15,
+                      "width": "100%",
+                    },
+                  ]
+                }
+              >
+                <FastImageView
+                  defaultSource={null}
+                  resizeMode="cover"
+                  source={
+                    {
+                      "priority": "normal",
+                      "uri": "https://d3566jsyo19arr.cloudfront.net/banner/marco_mueller_banner.jpg",
+                    }
+                  }
+                  style={
+                    {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    {
+                      "flexBasis": 0,
+                      "flexGrow": 1,
+                      "flexShrink": 1,
+                      "justifyContent": "center",
+                      "paddingLeft": 20,
+                    }
+                  }
+                >
+                  <Text
+                    bold={true}
+                    color="light"
+                    size="xs"
+                    style={
+                      [
+                        {
+                          "color": "#FFFFFF",
+                          "fontFamily": "TT Commons DemiBold",
+                          "fontSize": 13,
+                        },
+                        {},
+                      ]
+                    }
+                  >
+                    NEW
+                  </Text>
+                  <Text
+                    bold={true}
+                    color="light"
+                    size="lg"
+                    style={
+                      [
+                        {
+                          "color": "#FFFFFF",
+                          "fontFamily": "TT Commons DemiBold",
+                          "fontSize": 24,
+                        },
+                        {
+                          "marginBottom": 12,
+                          "marginTop": 6,
+                        },
+                      ]
+                    }
+                  >
+                    Fish preparation like
+a star chef
+                  </Text>
+                  <Text
+                    bold={false}
+                    color="light"
+                    size="sm"
+                    style={
+                      [
+                        {
+                          "color": "#FFFFFF",
+                          "fontFamily": "TT Commons Regular",
+                          "fontSize": 17,
+                        },
+                        {},
+                      ]
+                    }
+                  >
+                    With Rolf Fliegauf
+                  </Text>
+                </View>
+              </View>
+              <Text
+                bold={true}
+                color="black"
+                size="md"
+                style={
+                  [
+                    {
+                      "color": "#000000",
+                      "fontFamily": "TT Commons DemiBold",
+                      "fontSize": 19,
+                    },
+                    {
+                      "marginBottom": 16,
+                      "marginTop": 30,
+                    },
+                  ]
+                }
+              >
+                Creation for you
+              </Text>
+            </View>
+          </View>
+          <AutoLayoutView
+            enableInstrumentation={false}
+            horizontal={false}
+            onBlankAreaEvent={[Function]}
+            onLayout={[Function]}
+            renderAheadOffset={0}
+            scrollOffset={0}
+            style={
+              {
+                "height": 0,
+                "width": 0,
+              }
+            }
+            windowSize={0}
+          />
+          <CellContainer
+            index={-1}
+            style={
+              [
+                undefined,
+                undefined,
+              ]
+            }
+          />
+          <View
+            style={
+              {
+                "paddingBottom": 0,
+                "paddingRight": 8,
+              }
+            }
+          />
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</RCTSafeAreaView>
+`;
