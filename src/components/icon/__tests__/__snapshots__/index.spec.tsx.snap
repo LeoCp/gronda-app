@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon Component Should match snapshot 1`] = `
+<Image
+  source={
+    {
+      "testUri": "../../../src/assets/icons/logo.png",
+    }
+  }
+  style={
+    {
+      "height": 10,
+      "width": 10,
+    }
+  }
+/>
+`;
