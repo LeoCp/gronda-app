@@ -72,4 +72,16 @@ describe('CreationVisits storage', () => {
 
     expect(data).toBe(3);
   });
+
+  it.each([{}, [], undefined, null, ''])(
+    'Should return an error if the value passed to function increaseVisitCount is %p.',
+    value => {
+      const creationVisitsStore = new CreationVisitsStorage();
+
+      expect(() => {
+        // @ts-ignore
+        creationVisitsStore.increaseVisitCount(value);
+      }).toThrow(Error);
+    },
+  );
 });

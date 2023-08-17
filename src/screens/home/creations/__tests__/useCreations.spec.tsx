@@ -6,11 +6,16 @@ import { CreationVisitsStorage } from '@storage/creation-visits';
 import { useCreations } from '@screens/home/creations/hooks/creations';
 import { Routes } from '@navigation/types/routes';
 import { renderWithTheme } from '@utils/test-helper';
+import Toast from 'react-native-root-toast';
+import { RenderTargetOptions } from '@shopify/flash-list';
 
 const mockVisitCount = 7;
 const mockNavigate = jest.fn();
+const mockShowToast = jest.fn();
 
 const data = {
+  index: 1,
+  target: RenderTargetOptions.Cell,
   item: {
     id: 1,
     category_id: 1,
@@ -33,9 +38,15 @@ describe('useCreations hook', () => {
     .spyOn(CreationVisitsStorage.prototype, 'increaseVisitCount')
     .mockReturnValue(mockVisitCount);
 
+  jest.spyOn(Toast, 'show').mockImplementation(mockShowToast);
+
   jest
     .spyOn(navigation, 'useNavigation')
     .mockReturnValue({ navigate: mockNavigate });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
 
   it('Should pass the id correctly when call increaseVisitCount', () => {
     const { result } = renderHook(() => useCreations());
@@ -63,5 +74,23 @@ describe('useCreations hook', () => {
     expect(mockNavigate).toBeCalledWith(Routes.Creation, {
       visitCount: mockVisitCount,
     });
+  });
+
+  it('Should display error when the creation does not have an id.', () => {
+    increaseVisitCountMock.mockReset();
+
+    const { result } = renderHook(() => useCreations());
+
+    const { getByTestId } = renderWithTheme(
+      // @ts-ignore
+      result.current.renderCreationItem({ item: {} }),
+    );
+
+    const creationItem = getByTestId('creation-item');
+    fireEvent.press(creationItem);
+
+    expect(mockShowToast).toBeCalledWith(
+      'Unable to access the page. Please try again.',
+    );
   });
 });

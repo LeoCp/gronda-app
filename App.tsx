@@ -1,5 +1,6 @@
 import React from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { RootSiblingParent } from 'react-native-root-siblings';
 
 import { Navigation } from '@navigation/index';
 import { ThemeProvider } from 'styled-components';
@@ -11,7 +12,9 @@ export function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider theme={theme}>
-        <Navigation />
+        <RootSiblingParent>
+          <Navigation />
+        </RootSiblingParent>
       </ThemeProvider>
     </QueryClientProvider>
   );

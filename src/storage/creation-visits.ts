@@ -7,6 +7,11 @@
  */
 
 import { MMKV } from 'react-native-mmkv';
+import { z } from 'zod';
+
+type TCreationVisits = { [key: string]: number };
+
+const creationIdScheme = z.union([z.string().nonempty(), z.number()]);
 
 export class CreationVisitsStorage {
   private storageKey = 'CREATION_VISITS';
@@ -22,7 +27,7 @@ export class CreationVisitsStorage {
    * @memberOf CreationVisitsStorage
    * @returns {Object} Returns the creation visits
    */
-  get creationVisits() {
+  get creationVisits(): TCreationVisits {
     try {
       const jsonCreationVisits = this.storage.getString(this.storageKey);
       return JSON.parse(jsonCreationVisits || '{}');
@@ -35,10 +40,16 @@ export class CreationVisitsStorage {
    * Increase the count of visits to a creation page
    *
    * @memberOf CreationVisitsStorage
-   * @param {number} id The creation's id
+   * @param {number | string} id The creation's id
    * @returns {number} Returns the current quantity of vistis.
    */
-  increaseVisitCount(id: number): number {
+  increaseVisitCount(id: number | string): number {
+    const result = creationIdScheme.safeParse(id);
+
+    if (!result.success) {
+      throw new Error('Invalid id');
+    }
+
     const value = this.creationVisits[id] ? this.creationVisits[id] + 1 : 1;
     const data = JSON.stringify({ ...this.creationVisits, [id]: value });
 

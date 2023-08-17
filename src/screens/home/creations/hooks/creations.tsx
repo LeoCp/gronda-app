@@ -2,6 +2,7 @@ import React, { useCallback } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { useQuery } from 'react-query';
 import { ListRenderItem } from '@shopify/flash-list';
+import Toast from 'react-native-root-toast';
 
 import { TCreation } from '@models/creation';
 import { Routes } from '@navigation/types/routes';
@@ -21,9 +22,13 @@ export function useCreations() {
 
   const onOpenCreation = useCallback(
     (id: number) => {
-      const visitCount = creationVisits.increaseVisitCount(id);
+      try {
+        const visitCount = creationVisits.increaseVisitCount(id);
 
-      navigation.navigate(Routes.Creation, { visitCount });
+        navigation.navigate(Routes.Creation, { visitCount });
+      } catch (e) {
+        Toast.show('Unable to access the page. Please try again.');
+      }
     },
     [navigation],
   );
