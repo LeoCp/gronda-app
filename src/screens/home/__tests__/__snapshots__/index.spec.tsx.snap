@@ -62,7 +62,7 @@ exports[`Home Should match snapshot 1`] = `
         DataProvider {
           "_data": [],
           "_firstIndexToProcess": 0,
-          "_hasStableIds": false,
+          "_hasStableIds": true,
           "_requiresDataChangeHandling": false,
           "_size": 0,
           "getStableId": [Function],
@@ -78,6 +78,7 @@ exports[`Home Should match snapshot 1`] = `
       initialOffset={0}
       initialRenderIndex={0}
       isHorizontal={false}
+      keyExtractor={[Function]}
       layoutProvider={
         GridLayoutProviderWithProps {
           "_acceptableRelayoutDelta": 1,
@@ -111,6 +112,7 @@ exports[`Home Should match snapshot 1`] = `
             },
             "data": [],
             "estimatedItemSize": 200,
+            "keyExtractor": [Function],
             "numColumns": 2,
             "renderItem": undefined,
             "style": {},

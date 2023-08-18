@@ -24,6 +24,7 @@ export function Creations() {
     <S.Creations
       data={creations.data || []}
       renderItem={creations.renderCreationItem}
+      keyExtractor={creation => `${creation.id}`}
     />
   );
 }
