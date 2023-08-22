@@ -1,4 +1,4 @@
-name: Tests
+name: Continuous Integration.
 
 on:
   push:
@@ -20,6 +20,9 @@ jobs:
 
       - name: 📦  Install dependencies
         run: yarn install
+
+      - name: 🔍 Run lint
+        run: yarn lint
 
       - name: 🧪  Run test
         run: yarn coveralls
